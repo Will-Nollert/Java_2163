@@ -28,18 +28,21 @@ public class WilliamNollert {
             // constant for pi
             final double PI = Math.PI;
             // greogry series approximation of pi
-            for (int k = 0; k <= userInput; k++) {
+            for (int k = 1; k <= userInput; k++) {
                 // calculate the the first term of the series
-                tempSum = 4 * (1.0 / (2.0 * k + 1));
+                tempSum = 4 * (1.0 / (2.0 * k - 1));
                 // if k is even add temp sum to final sum
                 if (k % 2 == 0) {
-                    finalSum += tempSum;
+                    finalSum -= tempSum;
                 } else {
                     // if k is odd subtract temp sum from final sum
-                    finalSum -= tempSum;
+                    finalSum += tempSum;
                 }
                 double error = Math.abs(finalSum - PI);
-                System.out.printf("|%3d|%10.7f|%10.7f|%n", (k+1), finalSum, error);
+         
+
+    
+                System.out.printf("|%3d|%10.7f|%10.7f|%n", (k), finalSum, error);
             }
 
         }
