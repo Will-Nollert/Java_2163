@@ -39,9 +39,7 @@ public class WilliamNollert {
                     finalSum += tempSum;
                 }
                 double error = Math.abs(finalSum - PI);
-         
 
-    
                 System.out.printf("|%3d|%10.7f|%10.7f|%n", (k), finalSum, error);
             }
 
