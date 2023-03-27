@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 public class WilliamNollert {
     public static void main(String[] args) {
-        // ask the user for a positive integer
+        // ask the user for an integer
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number of iterations (n): ");
+        System.out.print("Enter the number of iterations (n): ");
         // store the user input in a variable called userInput
         int userInput = input.nextInt();
 
@@ -22,7 +22,7 @@ public class WilliamNollert {
         } else if (userInput >= 0) {
             // print the table header
             System.out.printf("|%3s|%10s|%10s|%n", "i", "Pi'", "Error");
-            // declare variables for serries\
+            // declare variables for serries
             double finalSum = 0;
             double tempSum;
             // constant for pi
@@ -31,11 +31,11 @@ public class WilliamNollert {
             for (int k = 1; k <= userInput; k++) {
                 // calculate the the first term of the series
                 tempSum = 4 * (1.0 / (2.0 * k - 1));
-                // if k is even add temp sum to final sum
+                // if k is even subtract temp sum to final sum
                 if (k % 2 == 0) {
                     finalSum -= tempSum;
                 } else {
-                    // if k is odd subtract temp sum from final sum
+                    // if k is odd add temp sum from final sum
                     finalSum += tempSum;
                 }
                 double error = Math.abs(finalSum - PI);
