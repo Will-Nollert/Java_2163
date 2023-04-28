@@ -1,23 +1,22 @@
-/**
- * This class represents the Caesar Cipher algorithm with a key between -25 and 25.
- */
+
 public class CaesarCipher {
+
+    //private used for encapsulation so that key wont be muttable
     private int key; // The key used to shift the characters
 
-    /**
-     * Constructor for the CaesarCipher class that takes a key as an argument.
-     * @param key the key to be used for encryption and decryption
-     */
+    //majorKey ;) 
     public CaesarCipher(int key) {
         this.key = key;
     }
 
     /**
-     * This method takes a plain text string as input and returns its encrypted form using the Caesar Cipher algorithm.
+     * takes a plain text string as input and returns its encrypted form using a shift based on the 
+     * users key.
      * @param plainText the plain text to be encrypted
      * @return the encrypted text
      */
     public String encrypt(String plainText) {
+        //use StringBuilder to avoid creating a new string object each time a character is appended
         StringBuilder cipherText = new StringBuilder();
 
         // Iterate over each character in the plain text string
@@ -43,11 +42,12 @@ public class CaesarCipher {
     }
 
     /**
-     * This method takes a cipher text string as input and returns its decrypted form using the Caesar Cipher algorithm.
+     *  takes a cipher text string as input and returns its decrypted form using the user specified shift.
      * @param cipherText the cipher text to be decrypted
      * @return the decrypted text
      */
     public String decrypt(String cipherText) {
+        //use StringBuilder to avoid creating a new string object each time a character is appended
         StringBuilder plainText = new StringBuilder();
 
         // Iterate over each character in the cipher text string
