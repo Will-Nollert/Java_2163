@@ -12,6 +12,8 @@ public class NollertWilliam extends Dictionary {
         System.out.println("Welcome to William Nollert's dictionary! Enter a word to get started (type 'q' at anytime to quit):");
 
         while (true) {
+            // Demarcate the user input field with ">>>>"
+            System.out.print(">>>> ");
             // Read the user's input and trim leading/trailing whitespace
             String input = scanner.nextLine().trim().toLowerCase();
 
